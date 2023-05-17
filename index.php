@@ -23,6 +23,7 @@
              <div class="row">
     <div class="col-3">
         <ul class="list-group">
+            <li class="list-group-item"><a href="?">Inicio</a></li> 
             <li class="list-group-item"><a href="?url=nuevoUsuario">Crear Usuario</a></li> 
             <li class="list-group-item"><a href="?url=ListarUsuarios">Listar Usuarios</a></li>
         </ul>
