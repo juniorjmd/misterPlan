@@ -119,7 +119,7 @@ class usuario {
             return [false,$e->getMessage()];
         } 
     }
-    public function safe(){
+    public function save(){
         try {
             $conexion = DataBase::getInstance();  
              $retorno =  $conexion->insert("usuarios" , $this->getArrayUsuario()); 

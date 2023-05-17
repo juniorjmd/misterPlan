@@ -18,9 +18,8 @@ spl_autoload_register(function ($nombre_clase) {
             $$key  = $value;
          }
          $nUsuario = new Class_php\usuario($gender, $name, $street, $city, $state, $country, $postcode, $email, $username, $sha1, $registered, $phone, $cell, $urlPicturiLarge, $urlPicturiMedium, $urlPicturiThumbnail);
-         $r = $nUsuario->safe(); 
+         $r = $nUsuario->save(); 
          if($r[0]){
-             
              echo json_encode(array("success" =>$r[1]));
         die(); 
          }else{ 

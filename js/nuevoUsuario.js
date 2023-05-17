@@ -1,5 +1,4 @@
-$(document).ready(()=>{
-    console.log('inicio'); 
+$(document).ready(()=>{ 
     $("#nuevoUsuario" ).on( "click", (e)=> {
         e.preventDefault();
         let  end = new Date();
@@ -7,8 +6,7 @@ $(document).ready(()=>{
          url: 'actions/getListUsers.php?'+end.getTime(),
          dataType: 'json',
          error : (error) =>{  Swal.fire({  icon: 'error',  title: 'Oops...',  text: error.responseText, });},
-         success: (data)=> {
-         console.log('wewerwer',data );
+         success: (data)=> { 
          let result = data.results[0] ; 
          $("#gender").val(result.gender);
          $("#name").val(`${result.name.first} ${result.name.last}`);
@@ -37,12 +35,10 @@ $(document).ready(()=>{
           e.preventDefault();
           let  end = new Date();  
           const form = $('#usuarioForm');
-          const datos = convertFormToJSON(form); 
-          console.log(JSON.stringify(datos));
+          const datos = convertFormToJSON(form);  
           const  posting = $.post( 'actions/addUser.php',datos);
           posting.done(( data )=> {
-              const json = JSON.parse(data)
-              console.log( json.success )
+              const json = JSON.parse(data) 
               toastr.success(json.success)
               $(':input').val('');
               $('#divImagen').html( '');
