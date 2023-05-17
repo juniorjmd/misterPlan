@@ -1,5 +1,5 @@
 <?php
-include "config/database.php";
+include "config/config.php";
 spl_autoload_register(function ($nombre_clase) {
     $dirName =  __DIR__ ."/../";
     

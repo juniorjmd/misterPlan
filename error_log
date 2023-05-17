@@ -1,0 +1,16 @@
+[17-May-2023 12:51:18 America/Bogota] PHP Warning:  include(/home/jdpsoluc/public_html/misterPlanPrueba/config): failed to open stream: No such file or directory in /home/jdpsoluc/public_html/misterPlanPrueba/view/ListarUsuarios.php on line 2
+[17-May-2023 12:51:18 America/Bogota] PHP Warning:  include(): Failed opening 'config/' for inclusion (include_path='.:/usr/share/php:/opt/alt/php73/usr/share/php:/opt/alt/php73/usr/share/pear') in /home/jdpsoluc/public_html/misterPlanPrueba/view/ListarUsuarios.php on line 2
+[17-May-2023 12:51:18 America/Bogota] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/jdpsoluc/public_html/misterPlanPrueba/Class_php/DataBase.php on line 181
+[17-May-2023 12:51:18 America/Bogota] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/jdpsoluc/public_html/misterPlanPrueba/Class_php/DataBase.php on line 181
+[17-May-2023 12:51:18 America/Bogota] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/jdpsoluc/public_html/misterPlanPrueba/Class_php/DataBase.php on line 181
+[17-May-2023 12:51:18 America/Bogota] PHP Warning:  Use of undefined constant DB_NAME_INICIO - assumed 'DB_NAME_INICIO' (this will throw an Error in a future version of PHP) in /home/jdpsoluc/public_html/misterPlanPrueba/Class_php/DataBase.php on line 181
+[17-May-2023 12:51:18 America/Bogota] PHP Warning:  Use of undefined constant DB_TYPE - assumed 'DB_TYPE' (this will throw an Error in a future version of PHP) in /home/jdpsoluc/public_html/misterPlanPrueba/Class_php/DataBase.php on line 181
+[17-May-2023 12:51:18 America/Bogota] PHP Fatal error:  Uncaught PDOException: could not find driver in /home/jdpsoluc/public_html/misterPlanPrueba/Class_php/DataBase.php:208
+Stack trace:
+#0 /home/jdpsoluc/public_html/misterPlanPrueba/Class_php/DataBase.php(208): PDO->__construct('DB_TYPE:host=DB...', 'DB_USER', 'DB_PASS')
+#1 /home/jdpsoluc/public_html/misterPlanPrueba/Class_php/DataBase.php(50): Class_php\DataBase->conectar()
+#2 /home/jdpsoluc/public_html/misterPlanPrueba/Class_php/DataBase.php(182): Class_php\DataBase->__construct()
+#3 /home/jdpsoluc/public_html/misterPlanPrueba/view/ListarUsuarios.php(10): Class_php\DataBase::getInstance()
+#4 /home/jdpsoluc/public_html/misterPlanPrueba/index.php(38): require_once('/home/jdpsoluc/...')
+#5 {main}
+  thrown in /home/jdpsoluc/public_html/misterPlanPrueba/Class_php/DataBase.php on line 208
