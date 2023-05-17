@@ -68,7 +68,7 @@ class usuario {
         
         
     }
-    private function getArrayUsuario()
+    private function getUsersArray()
     {      
         $arrUser["gender"]      =      $this->gender;
         $arrUser["name"]        =      $this->name;
@@ -122,7 +122,7 @@ class usuario {
     public function save(){
         try {
             $conexion = DataBase::getInstance();  
-             $retorno =  $conexion->insert("usuarios" , $this->getArrayUsuario()); 
+             $retorno =  $conexion->insert("usuarios" , $this->getUsersArray()); 
              return $retorno ;
         } catch (Exception $e) {
             return [false,$e->getMessage()];
