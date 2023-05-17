@@ -23,6 +23,10 @@ spl_autoload_register(function ($nombre_clase) {
 
 <html > 
     <body>
+         <div class="row">
+             <div class="col-11 text-center"><h4>Listado Usuarios Generados</h4></div></div>
+          <div class="row">
+    <div class="col-11">
         <table class="table" >
             <tr>
                 <th>Nombre</th>
@@ -48,5 +52,6 @@ spl_autoload_register(function ($nombre_clase) {
     <td><?=$value['email']; ?></td>  </tr>
     <?php  } ?>
     
-    </table>
+        </table></div><!-- comment -->
+          </div>
     </body></html>
