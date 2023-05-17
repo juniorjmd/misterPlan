@@ -1,0 +1,21 @@
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `gender` varchar(45) DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `street` varchar(45) DEFAULT NULL,
+  `city` varchar(45) DEFAULT NULL,
+  `state` varchar(45) DEFAULT NULL,
+  `country` varchar(45) DEFAULT NULL,
+  `postcode` varchar(45) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `sha1` text DEFAULT NULL,
+  `registered` datetime DEFAULT NULL,
+  `phone` varchar(25) DEFAULT NULL,
+  `cell` varchar(25) DEFAULT NULL,
+  `urlPicturiLarge` text DEFAULT NULL,
+  `urlPicturiMedium` text DEFAULT NULL,
+  `urlPicturiThumbnail` text DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username_UNIQUE` (`username`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
